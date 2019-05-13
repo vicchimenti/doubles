@@ -17,10 +17,14 @@ def get_user_input():
     return date_input
 
 
+def current_timestamp():
+    date_today = datetime.datetime.now()
+    print("Current Date/Time: ")
+    return date_today
+
+
 # Get Current Timestamp and Display Before Program Action
-date_today = datetime.datetime.now()
-print("Current Date/Time: ")
-print(str(date_today))
+print(str(current_timestamp()))
 
 # call get user input function
 user_input = get_user_input()
@@ -29,6 +33,4 @@ user_input = get_user_input()
 print(str(validate_time(user_input)))
 
 # Get Updated Timestamp and Display After Program Action
-date_today = datetime.datetime.now()
-print("Current Date/Time: ")
-print(str(date_today))
+print(str(current_timestamp()))
