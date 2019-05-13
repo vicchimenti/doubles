@@ -11,16 +11,24 @@ def validate_time(date_in):
     return True
 
 
+def get_user_input():
+    # Option for User Input
+    date_input = input("Enter any month and day in the format YY-MM-DD: ")
+    return date_input
+
+
 # Get Current Timestamp and Display Before Program Action
 date_today = datetime.datetime.now()
 print("Current Date/Time: ")
 print(str(date_today))
 
-# Option for User Input
-date_input = input("Enter any month and day in the format YY-MM-DD: ")
-print(str(validate_time(date_input)))
+# call get user input function
+user_input = get_user_input()
 
-# Get Current Timestamp and Display After Program Action
+# call validate time function
+print(str(validate_time(user_input)))
+
+# Get Updated Timestamp and Display After Program Action
 date_today = datetime.datetime.now()
 print("Current Date/Time: ")
 print(str(date_today))
