@@ -15,8 +15,17 @@ def validate_time(date_in):
 # function for gathering user input
 def get_user_input():
     # Option for User Input
-    date_input = input("Enter any month and day in the format YY-MM-DD: ")
+    # date_input = input("Enter any month and day in the format YY-MM-DD: ")
+
+    # Stub user input instead
+    date_input = stub_user_input()
     return date_input
+
+
+# stub user input function
+def stub_user_input():
+    # return a hard-coded valid date
+    return "01-01-01"
 
 
 # function for generating the current timestamp
