@@ -3,8 +3,7 @@ import datetime
 
 # function for validating user input is a valid date in the requested format
 def validate_time(date_in):
-    try:
-        datetime.datetime.strptime(date_in, '%y-%m-%d')
+    try: datetime.datetime.strptime(date_in, '%y-%m-%d')
     except ValueError:
         print('Invalid Date Format, enter format YY-MM-DD')
         return False
@@ -14,18 +13,14 @@ def validate_time(date_in):
 
 # function for gathering user input
 def get_user_input():
-    # Option for User Input
     # date_input = input("Enter any month and day in the format YY-MM-DD: ")
-
     # Stub user input instead
     date_input = stub_user_input()
     return date_input
 
 
-# stub user input function
-def stub_user_input():
-    # return a hard-coded valid date
-    return "01-01-01"
+# stub user input function and return a hard-coded valid date
+def stub_user_input(): return "01-01-01"
 
 
 # function for generating the current timestamp
@@ -36,15 +31,11 @@ def current_timestamp():
 
 
 #   ***   main driver   ***   #
-
 # Get Current Timestamp and Display Before Program Action
 print(str(current_timestamp()))
-
 # call get user input function
 user_input = get_user_input()
-
 # call validate time function
 print(str(validate_time(user_input)))
-
 # Get Updated Timestamp and Display After Program Action
 print(str(current_timestamp()))
